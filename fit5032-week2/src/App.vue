@@ -49,13 +49,16 @@ header {
 <!-- template可以让其他文件直接import该文件 -->
 <template>
   <div id="app">
-    <JSON /> <!-- 直接渲染 JSON.vue 组件 -->
+    <JSON />
+    <!-- 直接渲染 JSON.vue 组件 -->
   </div>
 </template>
 
 <script>
-import JSON from './components/JSON.vue' // 引入组件
+import JSON from './components/LoginRegister.vue' // 引入组件
 export default {
-  components: { JSON }
+  components: { JSON },
 }
 </script>
+
+<!-- Set-ExecutionPolicy RemoteSigned -Scope Process -->
