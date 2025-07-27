@@ -1,39 +1,39 @@
-<!-- src/views/ArticleDetailView.vue -->
 <template>
   <div class="container py-5">
     <div v-if="article" class="row justify-content-center">
       <div class="col-lg-8">
-        <!-- 文章标题和评分显示 -->
+        <!-- Article title and rating -->
         <h1 class="display-6 mb-3">{{ article.title }}</h1>
         <div class="d-flex align-items-center mb-3">
           <StarRating :rating="averageRating" />
           <span class="ms-3 text-muted">
-            平均 {{ averageRating.toFixed(2) }} 分 (共 {{ article.ratingCount }} 人评价)
+            Average {{ averageRating.toFixed(2) }} / 5 (based on {{ article.ratingCount }} ratings)
           </span>
         </div>
         <p class="text-muted border-bottom pb-3 mb-4">
-          作者：{{ article.author }} | 发布于：{{ article.publishDate }}
+          Author: {{ article.author }} | Published on: {{ article.publishDate }}
         </p>
 
-        <!-- 内容和图片 -->
+        <!-- Content and image -->
         <img :src="article.imageUrl" class="img-fluid rounded mb-4" :alt="article.title">
 
-        <!-- 安全性：使用净化后的 HTML -->
+        <!-- Security: sanitized HTML content -->
         <div class="article-content" v-html="sanitizedContent"></div>
 
         <hr class="my-5">
 
-        <!-- 评分交互区域 (点击星星即提交) -->
+        <!-- Rating interaction (clicking stars submits) -->
         <div v-if="authStore.isLoggedIn" class="card bg-light">
           <div class="card-body">
-            <h5 class="card-title">为本文评分</h5>
+            <h5 class="card-title">Rate this article</h5>
             <div v-if="isSubmitting" class="text-center">
               <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">正在提交...</span>
+                <span class="visually-hidden">Submitting...</span>
               </div>
             </div>
             <div v-else>
-              <p v-if="myRating > 0" class="small text-muted">您已评分，可以修改。</p>
+              <p v-if="myRating > 0" class="small text-muted">You have rated this article. You can update your rating.
+              </p>
               <StarRating :rating="myRating" :interactive="true" @update:rating="submitRating" />
               <p v-if="ratingStatus" class="mt-2 small" :class="ratingStatus.isError ? 'text-danger' : 'text-success'">
                 {{ ratingStatus.message }}
@@ -42,18 +42,18 @@
           </div>
         </div>
         <div v-else class="alert alert-info">
-          <router-link to="/login">登录</router-link> 后即可参与评分。
+          Please <router-link to="/login">log in</router-link> to rate this article.
         </div>
 
-        <!-- 返回按钮 -->
+        <!-- Back button -->
         <hr class="my-4">
         <router-link to="/news" class="btn btn-secondary">
-          <i class="bi bi-arrow-left"></i> 返回资讯列表
+          <i class="bi bi-arrow-left"></i> Back to News List
         </router-link>
       </div>
     </div>
     <div v-else class="text-center py-5">
-      <h2>正在加载文章...</h2>
+      <h2>Loading article...</h2>
       <div class="spinner-border text-primary mt-3"></div>
     </div>
   </div>
@@ -62,7 +62,7 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import DOMPurify from 'dompurify'; // 导入 DOMPurify
+import DOMPurify from 'dompurify';
 import { useAuthStore } from '@/stores/authStore';
 import { doc, getDoc, getDocs, query, where, collection, runTransaction } from 'firebase/firestore';
 import { db } from '@/firebase/config';
@@ -78,7 +78,7 @@ const myRatingDocId = ref(null);
 const isSubmitting = ref(false);
 const ratingStatus = ref(null);
 
-// 安全性：创建计算属性返回净化后的HTML
+// Sanitized HTML content
 const sanitizedContent = computed(() => {
   if (article.value && article.value.content) {
     return DOMPurify.sanitize(article.value.content);
@@ -147,10 +147,10 @@ const submitRating = async (newScore) => {
         myRatingDocId.value = userRatingRef.id;
       }
     });
-    ratingStatus.value = { message: '感谢您的评分！', isError: false };
+    ratingStatus.value = { message: 'Thanks for your rating!', isError: false };
   } catch (e) {
-    console.error("评分事务失败: ", e);
-    ratingStatus.value = { message: '评分失败，请稍后再试。', isError: true };
+    console.error("Rating transaction failed: ", e);
+    ratingStatus.value = { message: 'Failed to submit rating. Please try again later.', isError: true };
   } finally {
     isSubmitting.value = false;
   }

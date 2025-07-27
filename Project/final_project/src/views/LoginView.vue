@@ -5,25 +5,25 @@
       <div class="col-md-6">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h2 class="card-title text-center mb-4">欢迎回来</h2>
-            <!-- 登录表单 -->
+            <h2 class="card-title text-center mb-4">Welcome Back</h2>
+            <!-- Login Form -->
             <form @submit.prevent="handleLogin">
               <div class="mb-3">
-                <label for="email" class="form-label">邮箱地址</label>
+                <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="email" v-model="email" required>
               </div>
               <div class="mb-3">
-                <label for="password" class="form-label">密码</label>
+                <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" v-model="password" required>
               </div>
-              <!-- 错误提示 -->
+              <!-- Error Message -->
               <div v-if="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
               <div class="d-grid">
-                <button type="submit" class="btn btn-primary">登录</button>
+                <button type="submit" class="btn btn-primary">Login</button>
               </div>
             </form>
             <p class="mt-3 text-center">
-              还没有账户？ <router-link to="/register">免费注册</router-link>
+              Don't have an account? <router-link to="/register">Sign up for free</router-link>
             </p>
           </div>
         </div>
@@ -45,13 +45,13 @@ const router = useRouter();
 
 const handleLogin = async () => {
   try {
-    errorMessage.value = ''; // 重置错误信息
+    errorMessage.value = ''; // Reset error message
     const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
-    console.log('登录成功!', userCredential.user);
-    router.push('/'); // 登录成功后跳转到首页
+    console.log('Login successful!', userCredential.user);
+    router.push('/'); // Redirect to home after login
   } catch (error) {
-    console.error("登录失败:", error.message);
-    errorMessage.value = '登录失败：邮箱或密码错误。';
+    console.error("Login failed:", error.message);
+    errorMessage.value = 'Login failed: Incorrect email or password.';
   }
 };
 </script>

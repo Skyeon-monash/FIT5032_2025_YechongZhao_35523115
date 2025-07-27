@@ -2,34 +2,34 @@
   "articles": [
     {
       "id": 1,
-      "title": "老年人膳食营养指南：如何吃得健康",
-      "author": "张医生",
+      "title": "Dietary Nutrition Guide for Seniors: How to Eat Healthily",
+      "author": "Dr. Zhang",
       "publishDate": "2025-07-15",
       "imageUrl": "https://images.pexels.com/photos/3873177/pexels-photo-3873177.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "summary": "随着年龄的增长，合理的膳食搭配对于维持身体健康至关重要。本文将为您介绍老年人日常饮食的几个关键原则...",
-      "content": "<p>随着年龄的增长，身体的各项机能会发生变化，新陈代谢减慢，对营养的需求也与年轻时有所不同。因此，合理的膳食搭配对于维持老年人的身体健康和生活质量至关重要。</p><p><strong>关键原则一：食物多样，谷类为主。</strong> 每天的膳食应包括谷薯类、蔬菜水果类、畜禽鱼蛋奶类、大豆坚果类等食物。建议平均每天摄入 12 种以上食物，每周 25 种以上。</p><p><strong>关键原则二：多吃蔬菜、水果和大豆制品。</strong> 蔬菜和水果是维生素、矿物质和膳食纤维的重要来源。大豆制品富含优质蛋白质、钙和植物甾醇，有助于心血管健康。</p><p>祝您用餐愉快，身体健康！</p>",
+      "summary": "As we age, a balanced diet is crucial to maintaining good health. This article introduces several key principles for daily nutrition for seniors...",
+      "content": "<p>As we age, bodily functions change, metabolism slows down, and nutritional needs differ from younger years. Therefore, a balanced diet is essential for maintaining seniors' health and quality of life.</p><p><strong>Key Principle 1: Diverse foods, mainly grains.</strong> Daily meals should include grains and tubers, vegetables and fruits, meat, poultry, fish, eggs, dairy, soy products, and nuts. It is recommended to consume more than 12 different foods daily and over 25 weekly.</p><p><strong>Key Principle 2: Eat more vegetables, fruits, and soy products.</strong> Vegetables and fruits are important sources of vitamins, minerals, and dietary fiber. Soy products are rich in quality protein, calcium, and plant sterols that help cardiovascular health.</p><p>Wishing you pleasant meals and good health!</p>",
       "totalScore": 125,
       "ratingCount": 30
     },
     {
       "id": 2,
-      "title": "保持活力：适合老年人的五种温和运动",
-      "author": "王教授",
+      "title": "Stay Active: Five Gentle Exercises for Seniors",
+      "author": "Professor Wang",
       "publishDate": "2025-07-18",
       "imageUrl": "https://images.pexels.com/photos/4325453/pexels-photo-4325453.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "summary": "运动是保持身心健康的关键。不需要剧烈运动，一些温和的活动同样能带来巨大的益处。探索太极、散步、游泳等活动...",
-      "content": "<p>“生命在于运动”这句话对老年人同样适用。规律的体育活动有助于增强肌肉力量、改善平衡能力、预防跌倒，并对心理健康产生积极影响。以下是五种特别适合老年人的温和运动：</p><ol><li><strong>散步：</strong>最简单、最安全的运动方式。每天坚持30分钟的快走，可以有效改善心肺功能。</li><li><strong>太极拳：</strong>结合了缓慢、流畅的动作和深呼吸，能极大地提高身体的平衡性和柔韧性。</li><li><strong>游泳或水中漫步：</strong>水的浮力可以减轻关节的压力，对于有关节炎的老年人来说是绝佳的选择。</li><li><strong>固定自行车：</strong>在室内进行，不受天气影响，是一种安全的心血管锻炼方式。</li><li><strong>瑜伽：</strong>选择专为老年人设计的温和瑜伽课程，可以帮助放松身心，增加灵活性。</li></ol>",
+      "summary": "Exercise is key to maintaining physical and mental health. Vigorous activity isn't necessary; gentle exercises can bring great benefits. Explore Tai Chi, walking, swimming, and more...",
+      "content": "<p>\"Life is movement\" applies to seniors as well. Regular physical activity helps improve muscle strength, balance, prevents falls, and benefits mental health. Here are five gentle exercises especially suitable for seniors:</p><ol><li><strong>Walking:</strong> The simplest and safest exercise. A daily 30-minute brisk walk effectively improves cardiovascular health.</li><li><strong>Tai Chi:</strong> Combines slow, flowing movements and deep breathing to greatly enhance balance and flexibility.</li><li><strong>Swimming or Water Walking:</strong> Water buoyancy reduces joint stress, an excellent choice for seniors with arthritis.</li><li><strong>Stationary Biking:</strong> Indoor exercise unaffected by weather, a safe cardiovascular workout.</li><li><strong>Yoga:</strong> Choose gentle yoga classes designed for seniors to relax the body and increase flexibility.</li></ol>",
       "totalScore": 88,
       "ratingCount": 20
     },
     {
       "id": 3,
-      "title": "如何预防老年人常见的季节性流感",
-      "author": "李护士长",
+      "title": "How to Prevent Common Seasonal Flu in Seniors",
+      "author": "Head Nurse Li",
       "publishDate": "2025-07-22",
       "imageUrl": "https://images.pexels.com/photos/4031818/pexels-photo-4031818.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "summary": "季节交替时，老年人是流感的高发人群。接种疫苗、勤洗手、保持室内通风是有效的预防措施。了解更多实用技巧...",
-      "content": "<p>老年人由于免疫系统功能相对较弱，是季节性流感等呼吸道疾病的易感人群。做好预防工作至关重要。</p><ul><li><strong>及时接种流感疫苗：</strong>这是最有效的预防手段。建议每年在流感季节到来前完成接种。</li><li><strong>保持良好的个人卫生：</strong>勤洗手，使用肥皂和流动水，或使用含酒精的洗手液。避免用手触摸眼睛、鼻子和嘴巴。</li><li><strong>健康生活方式：</strong>保证充足的睡眠，合理饮食，适度锻炼，以增强身体抵抗力。</li><li><strong>保持社交距离：</strong>在流感高发季节，尽量减少前往人群拥挤、通风不畅的公共场所。</li></ul>",
+      "summary": "Seniors are at higher risk for seasonal flu during seasonal changes. Vaccination, hand washing, and good ventilation are effective preventive measures. Learn more practical tips...",
+      "content": "<p>Seniors have relatively weaker immune systems and are susceptible to respiratory illnesses such as seasonal flu. Prevention is vital.</p><ul><li><strong>Get flu vaccination promptly:</strong> The most effective prevention. Recommended before flu season every year.</li><li><strong>Maintain good personal hygiene:</strong> Wash hands frequently with soap and running water or use alcohol-based sanitizer. Avoid touching eyes, nose, and mouth.</li><li><strong>Healthy lifestyle:</strong> Ensure adequate sleep, balanced diet, and moderate exercise to boost immunity.</li><li><strong>Maintain social distancing:</strong> Avoid crowded and poorly ventilated public places during flu season.</li></ul>",
       "totalScore": 0,
       "ratingCount": 0
     }

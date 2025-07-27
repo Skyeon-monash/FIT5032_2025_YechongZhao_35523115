@@ -1,11 +1,10 @@
-<!-- src/components/StarRating.vue -->
 <template>
   <div class="star-rating" :class="{ 'is-interactive': interactive }"
     @mouseleave="interactive ? hoverRating = 0 : null">
     <i v-for="star in 5" :key="star" class="bi" :class="getStarClass(star)"
       @mouseover="interactive ? hoverRating = star : null" @click="interactive ? emitRating(star) : null"></i>
     <span v-if="showCount" class="rating-count ms-2 text-muted small">
-      ({{ ratingCount }} 评价)
+      ({{ ratingCount }} reviews)
     </span>
   </div>
 </template>
@@ -26,6 +25,7 @@ const hoverRating = ref(0);
 const displayRating = computed(() => hoverRating.value || props.rating);
 
 function getStarClass(star) {
+  // Round rating to nearest 0.5 for half stars
   const roundedRating = Math.round(displayRating.value * 2) / 2;
   if (star <= roundedRating) return 'bi-star-fill text-warning';
   if (star - 0.5 === roundedRating) return 'bi-star-half text-warning';

@@ -2,36 +2,36 @@
 <template>
   <div class="container py-5">
     <div class="text-center mb-5">
-      <h1 class="display-5">健康资讯中心</h1>
-      <p class="lead text-muted">学习最新的健康知识，拥抱更美好的晚年生活。</p>
+      <h1 class="display-5">Health News Center</h1>
+      <p class="lead text-muted">Learn the latest in health knowledge and embrace a better life in your later years.</p>
     </div>
 
     <div v-if="articles.length > 0" class="row">
-      <!-- 循环渲染文章卡片 -->
+      <!-- Render article cards in a loop -->
       <div v-for="article in articles" :key="article.id" class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-        <!-- 将文章数据通过 prop 传递给子组件 -->
+        <!-- Pass article data to child component via props -->
         <ArticleCard :article="article" />
       </div>
     </div>
 
-    <!-- 如果没有文章，显示提示信息 -->
+    <!-- Show message if there are no articles -->
     <div v-else class="text-center">
-      <p>正在加载文章...</p>
+      <p>Loading articles...</p>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import ArticleCard from '@/components/ArticleCard.vue'; // 引入卡片组件
-import db from '../../db.json'; // 导入模拟数据
+import ArticleCard from '@/components/ArticleCard.vue'; // Import card component
+import db from '../../db.json'; // Import mock data
 
 const articles = ref([]);
 
 onMounted(() => {
-  // 模拟异步 API 请求
+  // Simulate async API request
   setTimeout(() => {
     articles.value = db.articles;
-  }, 500); // 延迟500毫秒，模拟网络延迟
+  }, 500); // Simulate 500ms network delay
 });
 </script>

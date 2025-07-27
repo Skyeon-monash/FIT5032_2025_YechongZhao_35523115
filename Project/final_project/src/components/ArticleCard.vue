@@ -6,9 +6,9 @@
       <img :src="article.imageUrl" class="card-img-top" :alt="article.title">
       <div class="card-body d-flex flex-column">
         <h5 class="card-title">{{ article.title }}</h5>
-        <p class="card-text text-muted small">作者：{{ article.author }} | 日期：{{ article.publishDate }}</p>
+        <p class="card-text text-muted small">Author: {{ article.author }} | Date: {{ article.publishDate }}</p>
         <p class="card-text mt-2 flex-grow-1">{{ article.summary }}</p>
-        <span class="btn btn-primary mt-auto align-self-start">阅读全文</span>
+        <span class="btn btn-primary mt-auto align-self-start">View</span>
       </div>
     </div>
   </router-link>

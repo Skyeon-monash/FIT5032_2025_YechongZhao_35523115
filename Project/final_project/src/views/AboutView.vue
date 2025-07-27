@@ -1,38 +1,43 @@
-<!-- src/views/AboutView.vue -->
 <template>
   <div>
-    <!-- 1. 页面顶部介绍 -->
+    <!-- 1. Page Header -->
     <section class="bg-primary text-white text-center p-5">
       <div class="container">
-        <h1 class="display-4">关于我们</h1>
-        <p class="lead">我们是科技与关爱的桥梁，致力于服务老年社群</p>
+        <h1 class="display-4">About Us</h1>
+        <p class="lead">We are the bridge between technology and care, dedicated to serving the elderly community.</p>
       </div>
     </section>
 
-    <!-- 2. 使命与愿景 -->
+    <!-- 2. Mission and Vision -->
     <section class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6 mb-4">
-            <h2 class="h3"><i class="bi bi-bullseye text-primary me-2"></i>我们的使命</h2>
-            <p>我们的使命是利用创新的网络技术，为老年人群体提供全面、易于获取的健康资源与社区支持，消除信息鸿沟，提升晚年生活质量。</p>
+            <h2 class="h3"><i class="bi bi-bullseye text-primary me-2"></i>Our Mission</h2>
+            <p>Our mission is to leverage innovative web technologies to provide comprehensive and accessible health
+              resources and community support for the elderly, bridging the digital divide and enhancing the quality of
+              later life.</p>
           </div>
           <div class="col-md-6 mb-4">
-            <h2 class="h3"><i class="bi bi-eye-fill text-primary me-2"></i>我们的愿景</h2>
-            <p>我们的愿景是创建一个充满关怀、知识共享、互助互爱的线上社区，让每一位长者都能感受到科技带来的温暖与便利，健康、快乐、有尊严地生活。</p>
+            <h2 class="h3"><i class="bi bi-eye-fill text-primary me-2"></i>Our Vision</h2>
+            <p>Our vision is to build a caring online community where knowledge is shared and mutual support thrives,
+              enabling every elder to enjoy a warm, convenient, healthy, and dignified life through technology.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. 我们的故事 -->
+    <!-- 3. Our Story -->
     <section class="py-5 bg-light">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <h2>我们的故事</h2>
+            <h2>Our Story</h2>
             <p>
-              健康慈善机构始于一个简单的想法：科技发展不应让任何一个群体掉队。我们的创始人在看到自己的长辈在使用智能设备时遇到困难后，决心创建一个专为老年人设计的、简单易用的健康平台。经过数年的努力，我们从一个小团队发展成为一个服务数千名用户的非营利组织。
+              Our health charity started with a simple idea: no group should be left behind by technological progress.
+              When our founder saw their elder struggling with smart devices, they were inspired to create a health
+              platform tailored specifically for seniors—easy to use and accessible. After years of dedication, we’ve
+              grown from a small team into a nonprofit organization serving thousands.
             </p>
           </div>
           <div class="col-lg-6 text-center">
@@ -42,13 +47,13 @@
       </div>
     </section>
 
-    <!-- 4. 核心团队 -->
+    <!-- 4. Core Team -->
     <section class="py-5">
       <div class="container">
-        <h2 class="text-center mb-5">核心团队</h2>
+        <h2 class="text-center mb-5">Core Team</h2>
         <div class="row justify-content-center">
           <div v-for="member in teamMembers" :key="member.id" class="col-lg-4 col-md-6 mb-4">
-            <!-- 使用我们创建的卡片组件 -->
+            <!-- Using our custom card component -->
             <TeamMemberCard :member="member" />
           </div>
         </div>
@@ -62,14 +67,13 @@
 import { ref } from 'vue';
 import TeamMemberCard from '@/components/TeamMemberCard.vue';
 
-// 团队成员的模拟数据
+// Mock data for team members
 const teamMembers = ref([
   {
     id: 1,
     name: 'Yechong Zhao',
     role: 'IT Engineer',
-    bio: '大厂实习生、月入过万待成为选手',
-    // 使用占位图服务，您也可以替换成 assets 中的图片
+    bio: 'Big-tech intern, earning over ¥10K/month, aspiring to go pro',
     imageUrl: 'https://zyc-learning-1309954661.cos.ap-nanjing.myqcloud.com/machine-learning-pic/2025%2F07%2F40069736403593c9cb22304e33d7c6e7.jpeg',
   }
 ]);
